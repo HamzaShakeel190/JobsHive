@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "232435532286",
+    "project_id": "jobshive-912c4",
+    "storage_bucket": "jobshive-912c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232435532286:android:137b366610c849fae080af",
+        "android_client_info": {
+          "package_name": "com.example.jobs_hive1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQlqD-D9zTc0-uQgy2FNjGLMYrYBP1fcg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

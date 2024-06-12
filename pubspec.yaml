@@ -1,0 +1,69 @@
+name: job_search
+description: A new Flutter project.
+version: 1.0.0+1
+environment:
+  sdk: '>=2.12.0 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+
+  flutter_bloc: ^8.1.5
+  connectivity_plus: ^6.0.3
+  shared_preferences: ^2.2.3
+  cached_network_image: ^3.3.1
+  file_picker: ^8.0.4
+  flutter_svg: ^2.0.10+1
+  equatable: ^2.0.5
+  flutter_switch: ^0.3.2
+  pin_code_fields: ^8.0.1
+  sms_autofill: ^2.4.0
+  pin_input_text_field: ^4.5.1
+  dotted_border: ^2.1.0
+  intl: ^0.19.0
+  dio: ^5.4.3+1
+  fluttertoast: ^8.2.6
+  permission_handler: ^11.3.1
+  images_picker: ^1.2.11
+  google_sign_in:
+  firebase_auth:
+  firebase_core:
+  cloud_firestore:
+  firebase_storage:
+  get: ^4.6.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/images/
+  fonts:
+    - family: Plus Jakarta Sans
+      fonts:
+        - asset: assets/fonts/PlusJakartaSansBold.ttf
+          weight: 700
+        - asset: assets/fonts/PlusJakartaSansMedium.ttf
+          weight: 500
+        - asset: assets/fonts/PlusJakartaSansSemiBold.ttf
+          weight: 600
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/InterSemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/InterMedium.ttf
+          weight: 500
+        - asset: assets/fonts/InterRegular.ttf
+          weight: 400
+        - asset: assets/fonts/InterBold.ttf
+          weight: 700
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/PoppinsMedium.ttf
+          weight: 500
+        - asset: assets/fonts/PoppinsRegular.ttf
+          weight: 400

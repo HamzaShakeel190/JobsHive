@@ -1,0 +1,71 @@
+plugins {
+    id "com.android.application"
+    id "org.jetbrains.kotlin.android"
+    id "dev.flutter.flutter-gradle-plugin"
+    id 'com.google.gms.google-services'
+}
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader("UTF-8") { reader ->
+        localProperties.load(reader)
+    }
+}
+
+//def flutterVersionCode = localProperties.getProperty("flutter.versionCode")
+//if (flutterVersionCode == null) {
+//    flutterVersionCode = "1"
+//}
+
+def flutterVersionName = localProperties.getProperty("flutter.versionName")
+if (flutterVersionName == 1) {
+    flutterVersionName = "1.0"
+}
+
+android {
+    namespace = "com.example.jobs_hive1"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId = "com.example.jobs_hive1"
+        minSdkVersion 23
+        targetSdkVersion flutter.targetSdkVersion
+        multiDexEnabled true
+        versionCode 1
+        versionName flutterVersionName
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.20"
+    implementation platform('com.google.firebase:firebase-bom:33.1.0')
+    implementation "androidx.multidex:multidex:2.0.1"
+}
+
+// Enforce Kotlin version to resolve conflicts
+configurations.all {
+    resolutionStrategy.eachDependency { details ->
+        if (details.requested.group == 'org.jetbrains.kotlin') {
+            details.useVersion '1.8.22'
+        }
+    }
+}
